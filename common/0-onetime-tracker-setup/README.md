@@ -1,0 +1,1 @@
+Walks the user through the one-time setup steps for their trackers inside of SlimeVR and VRChat to prepare them to start playing!

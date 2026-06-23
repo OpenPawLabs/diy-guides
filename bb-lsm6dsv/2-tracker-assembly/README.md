@@ -1,0 +1,1 @@
+Walks the user through assembling the trackers by attaching batteries, and screwing them together into the cases. Also walks the user through the assembly of the tracker charging dock.

@@ -1,0 +1,1 @@
+Contains the guide that references what materials/tools the user needs to acquire to complete the guide. Gives a general overview of the project and acts as the starting point for users.

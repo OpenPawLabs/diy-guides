@@ -1,0 +1,1 @@
+Walks the user through the steps required in VRChat every time they use their trackers. Quick calibrate in SlimeVR, and click Calibrate in VRChat!
