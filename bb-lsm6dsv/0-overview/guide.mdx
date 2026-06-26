@@ -1,0 +1,84 @@
+import {
+  Callout,
+  GuideLayout,
+  GuideStep,
+  GuideStepList,
+  MediaFigure,
+  ToolList,
+} from "@openpawlabs/diy-guides-ui";
+
+<GuideLayout>
+
+  <GuideLayout.Header
+    title="Overview Guide"
+    heroImage="./images/trackers-with-dock-wip-1.png"
+    difficulty="easy"
+    timeEstimate="30 minutes"
+    meta="Draft"
+  />
+
+  <GuideLayout.Intro>
+    See a general overview of the steps that the next guides will walk you through. This acts as a quick view into the
+  </GuideLayout.Intro>
+
+  <GuideLayout.Sidebar>
+    <ToolList title="Tools">
+      <ToolList.Item name="3D Printer" quantity={1} />
+      <ToolList.Item name="#1 Philips Screwdriver" quantity={1} />
+    </ToolList>
+  </GuideLayout.Sidebar>
+
+  <GuideLayout.Content>
+    <GuideStepList>
+      <GuideStep title="First step in the guide">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/trackers-with-dock-wip.png"
+            annotations={[
+              { type: "point", x: 16.66, y: 42.63, label: "1", color: "YELLOW" },
+              { type: "circle", x: 17.44, y: 38.25, radius: 19.59, color: "LIGHT_BLUE" },
+              { type: "rectangle", x1: 28.02, y1: 31.23, x2: 66.68, y2: 96.19, color: "LIGHT_BLUE" },
+            ]}
+          />
+          <MediaFigure
+            src="./images/pcba-cropped-wip-1.png"
+            displayRegion={{ x: 0, y: 1589, width: 1784 }}
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="ORANGE">
+            Add an instruction.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet>
+            This is just a test.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="./files/charger-dock-dock-bottom-v3-1.step" download>Download .STEP file</LinkButton.Item>
+            </LinkButton>
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="ORANGE">
+            Add an instruction.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            Add an instruction.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Second step in the guide">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/pcba-cropped-wip.png"
+            displayRegion={{ x: 0, y: 818, width: 1784 }}
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet>
+            This is what an instruction looks like.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+    </GuideStepList>
+  </GuideLayout.Content>
+
+</GuideLayout>

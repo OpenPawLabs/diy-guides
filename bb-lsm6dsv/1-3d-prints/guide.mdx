@@ -1,0 +1,109 @@
+import {
+  Callout,
+  GuideLayout,
+  GuideStep,
+  GuideStepList,
+  MediaFigure,
+  ToolList,
+} from "@openpawlabs/diy-guides-ui";
+
+<GuideLayout>
+
+  <GuideLayout.Header
+    title="3D Print Parts"
+    heroImage="./images/3d-printer-2.jpg"
+    difficulty="easy"
+    timeEstimate="6 Hours (Printing)"
+    meta="Draft"
+  />
+
+  <GuideLayout.Intro>
+    Get everything required for the rest of the guides 3D Printed! This step takes the longest, but will make you breeze through the rest of the tasks!
+    
+    If you want a file that contains EVERYTHING you need to print for the project, you can download this .3mf file right here and start printing each plate!
+    
+    <LinkButton>
+        <LinkButton.Item href="./files/openpaw-trackers.3mf" download>Download .3mf with EVERYTHING</LinkButton.Item>
+    </LinkButton>
+  </GuideLayout.Intro>
+
+  <GuideLayout.Sidebar>
+    <ToolList title="Tools">
+      <ToolList.Item name="3D Printer" quantity={1} thumbnail="./images/3d-printer.jpg" />
+    </ToolList>
+    <ToolList title="Materials">
+      <ToolList.Item name="PLA Filament (250g)" quantity={1} thumbnail="./images/pla-filament.jpg" />
+    </ToolList>
+  </GuideLayout.Sidebar>
+
+  <GuideLayout.Content>
+    <GuideStepList>
+      <GuideStep title="Tracker Case Body (2 hours)">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/8-case-3dfile-screenshot.jpg"
+            displayRegion={{ x: 0, y: 0, width: 1811 }}
+          />
+          <MediaFigure
+            src="./images/openpaw-tracker-case-v7.step"
+            type="model"
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="GREEN">
+            You will need to print out 1 tracker case for each tracker.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Download the 3mf file and print with default settings.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            A set of 8 cases takes **2 hours** to print and takes **79g of filament**
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="./files/openpaw-tracker-case-v7.3mf" download>Download .3mf</LinkButton.Item>
+              <LinkButton.Item href="./files/openpaw-tracker-case-v7.step" download>Download .step</LinkButton.Item>
+              <LinkButton.Item href="./files/openpaw-tracker-case-v7.stl" download>Download .stl</LinkButton.Item>
+            </LinkButton>
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Tracker Lids/Labels">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/multicolor-labels-1.jpg"
+            displayRegion={{ x: 783, y: 866, width: 828 }}
+            annotations={[
+              { type: "rectangle", x1: 11.3, y1: 27.57, x2: 42.61, y2: 48.17, color: "LIGHT_BLUE" },
+              { type: "rectangle", x1: 62.5, y1: 26.49, x2: 94.12, y2: 47.93, color: "RED" },
+              { type: "rectangle", x1: 11.12, y1: 56.76, x2: 42.57, y2: 76.7, color: "GREEN" },
+            ]}
+          />
+          <MediaFigure src="./images/3d-printer-1.jpg" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Print out labels for each of your trackers by downloading the .3mf file and choosing which tracker labels you want!
+          </GuideStep.Bullet>
+          <GuideStep.Bullet>
+            Files are provided for both single color printing, and multi-color printing! We recommend the multi-color printing
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="" download>Download .3mf (One Color) upload me...</LinkButton.Item>
+            </LinkButton>
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="YELLOW">
+            Multi-Color prints only have a single color change making them highly efficient! (They also look way cooler!!)
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="" download>Download .3mf (Multi-Color) upload me...</LinkButton.Item>
+            </LinkButton>
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+    </GuideStepList>
+  </GuideLayout.Content>
+
+</GuideLayout>

@@ -1,0 +1,50 @@
+import {
+  Callout,
+  GuideLayout,
+  GuideStep,
+  GuideStepList,
+  LinkButton,
+  MediaFigure,
+  ToolList,
+} from "@openpawlabs/diy-guides-ui";
+
+<GuideLayout>
+
+  <GuideLayout.Header
+    title="One-time Setup"
+    heroImage="./images/8-case-3dfile-screenshot.jpg"
+    difficulty="easy"
+    timeEstimate="30 minutes"
+    meta="Draft"
+  />
+
+  <GuideLayout.Intro>
+    Replace this intro with a short overview of what the guide helps readers do.
+  </GuideLayout.Intro>
+
+  <GuideLayout.Sidebar>
+    <ToolList title="Tools">
+      <ToolList.Item name="Add a required tool" quantity={1} />
+    </ToolList>
+  </GuideLayout.Sidebar>
+
+  <GuideLayout.Content>
+    <Callout type="note" title="Before you begin">
+      Add any important setup notes, warnings, or context here.
+    </Callout>
+
+    <GuideStepList>
+      <GuideStep title="Describe the first step">
+        <GuideStep.Media>
+          <MediaFigure src="./images/placeholder.jpg" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet>
+            Replace this placeholder instruction with the first action.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+    </GuideStepList>
+  </GuideLayout.Content>
+
+</GuideLayout>
