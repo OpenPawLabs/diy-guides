@@ -10,111 +10,167 @@ import {
 <GuideLayout>
 
   <GuideLayout.Header
-    title="Overview Guide"
+    title="Project Overview"
     heroImage="./images/trackers-with-dock-wip-1.png"
     difficulty="easy"
-    timeEstimate="30 minutes"
-    meta="Draft"
+    timeEstimate="15 minutes"
+    meta=""
   />
 
   <GuideLayout.Intro>
-    See a general overview of the steps that the next guides will walk you through. This acts as a quick view into the
+    Building your own trackers is very simple and has a few basic steps that you will need to follow. This is a brief overview of each of the step-groups you will need to perform in order to build your own trackers from scratch! By the end of this guide you should have all the materials and tools collected for the rest of the other guides.
   </GuideLayout.Intro>
 
   <GuideLayout.Sidebar>
     <ToolList title="Tools">
-      <ToolList.Item name="3D Printer" quantity={1} />
-      <ToolList.Item name="#1 Philips Screwdriver" quantity={1} />
+      <ToolList.Item name="3D Printer" quantity={1} thumbnail="./images/3d-printer.jpg" />
+      <ToolList.Item name="Philips Screwdriver (PH1)" quantity={1} thumbnail="./images/stanley-essential-phillips-short-screwdriver-24-pcs.jpg" />
+    </ToolList>
+    <ToolList title="Materials">
+      <ToolList.Item name="Tracker Boards" quantity={8} href="https://openpawlabs.com/shop/slimevr" price="$25/ea" thumbnail="./images/img-4400-edit.png" />
+      <ToolList.Item name="Charging Dock Board" quantity={1} href="https://openpawlabs.com/shop/slimevr-dock" price="$25" thumbnail="./images/charging-dock-tmp.jpg" />
+      <ToolList.Item name="PLA Filament (250g)" quantity={1} price="$10" thumbnail="./images/pla-filament.jpg" />
+    </ToolList>
+    <ToolList title="DIY Strap Materials (Optional)">
+      <ToolList.Item name="Elastic Band w/ Silicon Grips (30mm / 1.2in)" quantity={1} href="https://www.amazon.com/dp/B097XC3NZJ" price="$11.99" thumbnail="./images/elastic-band-silicon-grips.jpg" />
     </ToolList>
   </GuideLayout.Sidebar>
 
   <GuideLayout.Content>
     <GuideStepList>
-      <GuideStep title="First step in the guide">
+      <GuideStep title="Gather Tools">
         <GuideStep.Media>
           <MediaFigure
-            src="./images/trackers-with-dock-wip.png"
+            src="./images/3d-printer-large.jpg"
+            displayRegion={{ x: 0, y: 267, width: 1940 }}
             annotations={[
-              { type: "point", x: 16.66, y: 42.63, label: "1", color: "YELLOW" },
-              { type: "circle", x: 17.44, y: 38.25, radius: 19.59, color: "LIGHT_BLUE" },
-              { type: "rectangle", x1: 28.02, y1: 31.23, x2: 66.68, y2: 96.19, color: "LIGHT_BLUE" },
+              { type: "point", x: 48.61, y: 54.88, label: "3D Printer", color: "LIGHT_BLUE" },
             ]}
           />
           <MediaFigure
-            src="./images/pcba-cropped-wip-1.png"
-            displayRegion={{ x: 0, y: 1589, width: 1784 }}
+            src="./images/stanley-essential-phillips-short-screwdriver-24-pcs-1.jpg"
+            annotations={[
+              { type: "point", x: 30.65, y: 36.19, label: "Philips PH1", color: "GREEN" },
+            ]}
+          />
+          <MediaFigure
+            src="./images/makerspace-map-preview.jpg"
+            annotations={[
+              { type: "point", x: 78.86, y: 59.99, label: "Makerspace Map", color: "RED" },
+            ]}
           />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet color="ORANGE">
-            Add an instruction.
+          <GuideStep.Bullet variant="note">
+            Building your trackers requires very few tools, we tried to design them to need as few tools as possible to make it extra simple!
           </GuideStep.Bullet>
-          <GuideStep.Bullet>
-            This is just a test.
+          <GuideStep.Bullet color="GREEN">
+            Grab a Philips Screwdriver, you will want this to be a **PH1 tip** but you can also use the smaller PH0 screwdriver, but the screws included in the kit are PH1.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            You will need a 3D Printer or access to one. If you don't have a 3D Printer we suggest **asking a friend** for help!
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="RED">
+            If you can't find a friend to help, we suggest checking if your **school or library** might have a 3D printer you can use! You can also see if your **local Makerspace** could let you use one!
           </GuideStep.Bullet>
           <GuideStep.Bullet variant="button">
             <LinkButton>
-              <LinkButton.Item href="./files/charger-dock-dock-bottom-v3-1.step" download>Download .STEP file</LinkButton.Item>
+              <LinkButton.Item href="https://makerspace.com/map/" external>Find a Makerspace here!</LinkButton.Item>
             </LinkButton>
-          </GuideStep.Bullet>
-          <GuideStep.Bullet color="ORANGE">
-            Add an instruction.
-          </GuideStep.Bullet>
-          <GuideStep.Bullet variant="note">
-            Add an instruction.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Second step in the guide">
+      <GuideStep title="Gather Materials">
         <GuideStep.Media>
           <MediaFigure
-            src="./images/pcba-cropped-wip.png"
-            displayRegion={{ x: 0, y: 818, width: 1784 }}
+            src="./images/tracker-board-transparent-1080.png"
+            displayRegion={{ x: 214, y: 39, width: 841 }}
+            annotations={[
+              { type: "point", x: 81.86, y: 44.64, label: "Tracker Board", color: "LIGHT_BLUE" },
+            ]}
+          />
+          <MediaFigure src="./images/charging-dock-md.png" />
+          <MediaFigure
+            src="./images/pla-filament-2.jpg"
+            displayRegion={{ x: 0, y: 240, width: 1000 }}
+            annotations={[
+              { type: "point", x: 46.22, y: 39.53, label: "PLA Filament", color: "GREEN" },
+            ]}
           />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            This is what an instruction looks like.
+          <GuideStep.Bullet color="GREEN">
+            Make sure you have at least 250g of PLA Filament in the color(s) you would like the trackers to be.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Buy assembled the Tracker Boards, you will need one board for each tracker you plan to build!
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="YELLOW">
+            Be sure to also buy a Charging Dock board if you plan to build one. Each dock charges up to 8 trackers.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="https://openpawlabs.com/shop/slimevr" external>Buy Tracker/Dock Boards</LinkButton.Item>
+            </LinkButton>
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Describe the next step">
+      <GuideStep title="Get Straps or DIY Materials">
         <GuideStep.Media>
-          <MediaFigure src="./images/placeholder.png" />
+          <MediaFigure
+            src="./images/vyrovr-comfort-straps.jpg"
+            annotations={[
+              { type: "point", x: 50.11, y: 47.61, label: "Comfort Straps", color: "GREEN" },
+            ]}
+          />
+          <MediaFigure src="./images/diy-strap-set-placeholder.png" />
+          <MediaFigure
+            src="./images/diy-strap-material.jpg"
+            displayRegion={{ x: 0, y: 201, width: 960 }}
+            annotations={[
+              { type: "point", x: 50.61, y: 65.18, label: "DIY Straps", color: "LIGHT_BLUE" },
+            ]}
+          />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet variant="note">
+            You can either build your own DIY Straps or purchase some nicer straps from someone in the community!
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            We recommend you buy a set of straps from VYR0 VR or another community creator! Any pre-made straps should work just fine!
+            
+            You can find a few options here:
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="https://vyrovr.com/products/10-elastic-full-body-tracker-straps" external>($28) VYR0 VR Full Body Strap Set</LinkButton.Item>
+            </LinkButton>
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="https://vyrovr.com/products/vyro-vr-comfort-strap-bundles?variant=45071132196943" external>($156) VYRO VR Comfort Strap Bundle</LinkButton.Item>
+            </LinkButton>
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            If you are on a budget, you can also build your own DIY Straps for around $12, making it very affordable. They work pretty well, and you can always buy nicer straps later. 
+            
+            You will want it to be around ~30mm (1.2in) wide. You can find some options here:
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="https://www.amazon.com/dp/B097XC3NZJ" external>($12) DIY Strap Elastic Band</LinkButton.Item>
+            </LinkButton>
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Describe the next step">
+      <GuideStep title="You are ready!">
         <GuideStep.Media>
-          <MediaFigure src="./images/placeholder-1.png" />
+          <MediaFigure src="./images/all-materials.png" />
+          <MediaFigure src="./images/party-face-emoji-big.png" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
-          </GuideStep.Bullet>
-        </GuideStep.Bullets>
-      </GuideStep>
-      <GuideStep title="Describe the next step">
-        <GuideStep.Media>
-          <MediaFigure src="./images/placeholder-2.png" />
-        </GuideStep.Media>
-        <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
-          </GuideStep.Bullet>
-        </GuideStep.Bullets>
-      </GuideStep>
-      <GuideStep title="Describe the next step">
-        <GuideStep.Media>
-          <MediaFigure src="./images/placeholder-3.png" />
-        </GuideStep.Media>
-        <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="GREEN">
+            You should now have all the tools and materials you need to follow the rest of the guides! Take some time to celebrate then continue on to the next guide!
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
