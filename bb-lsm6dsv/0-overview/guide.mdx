@@ -11,7 +11,7 @@ import {
 
   <GuideLayout.Header
     title="Project Overview"
-    heroImage="images/dock-w-pcb-angled-transparent-img-4545.webp"
+    heroImage="./images/dock-w-pcb-angled-transparent-img-4545.webp"
     difficulty="easy"
     timeEstimate="15 minutes"
     meta=""
@@ -25,15 +25,15 @@ import {
 
   <GuideLayout.Sidebar>
     <ToolList title="Tools">
-      <ToolList.Item name="3D Printer" quantity={1} thumbnail="images/3d-printer.webp" />
-      <ToolList.Item name="Philips Screwdriver (PH1)" quantity={1} thumbnail="images/img-4713-1.webp" />
+      <ToolList.Item name="3D Printer" quantity={1} thumbnail="./images/3d-printer.webp" />
+      <ToolList.Item name="Philips Screwdriver (PH1)" quantity={1} thumbnail="./images/img-4713-1.webp" />
     </ToolList>
     <ToolList title="Materials">
-      <ToolList.Item name="Tracker Boards" quantity={8} href="https://openpawlabs.com/products/diy-slimevr-tracker#kit" price="$25/ea" thumbnail="images/img-4400-edit.webp" />
-      <ToolList.Item name="Batteries (903035 w/ JST PH2.0 connector)" quantity={8} href="https://openpawlabs.com/products/diy-slimevr-tracker#kit" price="$16" thumbnail="images/battery-1000mah-side-bend-transparent-cropped-img-4592-1.webp" />
-      <ToolList.Item name="Charging Dock Board" quantity={1} href="https://openpawlabs.com/products/diy-slimevr-tracker#kit" price="$25" thumbnail="images/dock-pcb-transparent-img-4443-1.webp" />
-      <ToolList.Item name="PLA Filament (~240g)" quantity={1} price="$10" thumbnail="images/img-4718-1.webp" />
-      <ToolList.Item name="PETG Filament (~55g)" quantity={1} price="$5" thumbnail="images/img-4719-1.webp" />
+      <ToolList.Item name="Tracker Boards" quantity={8} href="https://openpawlabs.com/products/diy-slimevr-tracker#kit" price="$25/ea" thumbnail="./images/img-4400-edit.webp" />
+      <ToolList.Item name="Batteries (903035 w/ JST PH2.0 connector)" quantity={8} href="https://openpawlabs.com/products/diy-slimevr-tracker#kit" price="$16" thumbnail="./images/battery-1000mah-side-bend-transparent-cropped-img-4592-1.webp" />
+      <ToolList.Item name="Charging Dock Board" quantity={1} href="https://openpawlabs.com/products/diy-slimevr-tracker#kit" price="$25" thumbnail="./images/dock-pcb-transparent-img-4443-1.webp" />
+      <ToolList.Item name="PLA Filament (~240g)" quantity={1} price="$10" thumbnail="./images/img-4718-1.webp" />
+      <ToolList.Item name="PETG Filament (~55g)" quantity={1} price="$5" thumbnail="./images/img-4719-1.webp" />
     </ToolList>
   </GuideLayout.Sidebar>
 
@@ -42,18 +42,18 @@ import {
       <GuideStep title="Gather Tools">
         <GuideStep.Media>
           <MediaFigure
-            src="images/img-4713.webp"
+            src="./images/img-4713.webp"
             displayRegion={{ x: 583, y: 385, width: 2761 }}
             annotations={[
               { type: "rectangle", x1: 27.62, y1: 61.96, x2: 57.78, y2: 77.55, color: "GREEN", title: "Philips PH1" },
             ]}
           />
           <MediaFigure
-            src="images/img-4710.webp"
+            src="./images/img-4710.webp"
             displayRegion={{ x: 299, y: 86, width: 3329 }}
           />
           <MediaFigure
-            src="images/makerspace-map-preview.webp"
+            src="./images/makerspace-map-preview.webp"
             annotations={[
               { type: "point", x: 78.86, y: 59.99, label: "Makerspace Map", color: "RED" },
             ]}
@@ -85,12 +85,12 @@ import {
       <GuideStep title="Gather Boards &amp; Batteries">
         <GuideStep.Media>
           <MediaFigure
-            src="images/tracker-board-transparent-1080.webp"
+            src="./images/tracker-board-transparent-1080.webp"
             displayRegion={{ x: 214, y: 39, width: 841 }}
           />
-          <MediaFigure src="images/dock-pcb-transparent-img-4443.webp" />
+          <MediaFigure src="./images/dock-pcb-transparent-img-4443.webp" />
           <MediaFigure
-            src="images/battery-1000mah-side-bend-transparent-img-4592.webp"
+            src="./images/battery-1000mah-side-bend-transparent-img-4592.webp"
             displayRegion={{ x: 1085, y: 803, width: 1111 }}
           />
         </GuideStep.Media>
@@ -129,13 +129,13 @@ import {
       <GuideStep title="Get Straps">
         <GuideStep.Media>
           <MediaFigure
-            src="images/vyrovr-comfort-straps.webp"
+            src="./images/vyrovr-comfort-straps.webp"
             annotations={[
               { type: "point", x: 50.11, y: 47.61, label: "Comfort Straps", color: "GREEN" },
             ]}
           />
           <MediaFigure
-            src="images/diy-strap-material.webp"
+            src="./images/diy-strap-material.webp"
             displayRegion={{ x: 0, y: 201, width: 960 }}
             annotations={[
               { type: "point", x: 50.61, y: 65.18, label: "DIY Straps", color: "LIGHT_BLUE" },
@@ -175,15 +175,15 @@ import {
       </GuideStep>
       <GuideStep title="Get 3D Printer Filament">
         <GuideStep.Media>
-          <MediaFigure src="images/img-4722.webp" />
+          <MediaFigure src="./images/img-4722.webp" />
           <MediaFigure
-            src="images/img-4718.webp"
+            src="./images/img-4718.webp"
             annotations={[
               { type: "rectangle", x1: 19.66, y1: 26.3, x2: 86.92, y2: 71.31, color: "LIGHT_BLUE" },
             ]}
           />
           <MediaFigure
-            src="images/img-4719.webp"
+            src="./images/img-4719.webp"
             annotations={[
               { type: "rectangle", x1: 25.28, y1: 26.89, x2: 92.39, y2: 71.99, color: "GREEN" },
             ]}
@@ -206,8 +206,8 @@ import {
       </GuideStep>
       <GuideStep title="You are ready!">
         <GuideStep.Media>
-          <MediaFigure src="images/img-4715.webp" />
-          <MediaFigure src="images/party-face-emoji-big.webp" />
+          <MediaFigure src="./images/img-4715.webp" />
+          <MediaFigure src="./images/party-face-emoji-big.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
           <GuideStep.Bullet color="GREEN">

@@ -16,8 +16,11 @@ from guide_images import (  # noqa: E402
     collect_image_refs,
     find_images_dirs,
     format_bytes,
+    repair_mdx_image_prefixes,
     repo_root_from,
 )
+
+UNUSED_RATIO_ABORT = 0.5
 
 
 def main() -> int:
@@ -45,12 +48,28 @@ def main() -> int:
         action="store_true",
         help="Delete unused files (default is report-only)",
     )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Allow --delete even when unused ratio is unusually high",
+    )
     args = parser.parse_args()
 
     root = (args.root or repo_root_from(__file__)).resolve()
+
+    repaired_files, repaired_refs = repair_mdx_image_prefixes(root, dry_run=False)
+    if repaired_files:
+        print(
+            f"Repaired ./ prefix on {repaired_refs} image ref(s) "
+            f"across {repaired_files} guide(s)."
+        )
+        print()
+
     refs = collect_image_refs(root)
     referenced = {ref.source_path.resolve() for ref in refs}
+    existing_referenced = sum(1 for path in referenced if path.exists())
 
+    candidates: list[Path] = []
     unused: list[Path] = []
     for images_dir in find_images_dirs(root):
         for path in sorted(images_dir.iterdir()):
@@ -60,17 +79,37 @@ def main() -> int:
                 continue
             if args.rasters_only and path.suffix.lower() not in RASTER_EXTENSIONS:
                 continue
+            candidates.append(path)
             if path.resolve() not in referenced:
                 unused.append(path)
 
     print(f"Root: {root}")
-    print(f"Referenced image paths: {len(referenced)}")
+    print(f"Referenced image paths: {len(referenced)} ({existing_referenced} exist on disk)")
+    print(f"Candidate files: {len(candidates)}")
     print(f"Unused files: {len(unused)}")
     if args.delete:
         print("Mode: delete")
     else:
         print("Mode: report only (pass --delete to remove)")
     print()
+
+    if args.delete:
+        if existing_referenced == 0 and candidates:
+            print(
+                "error: refusing to delete — no referenced image files exist on disk. "
+                "Guides may not be scanning correctly; fix refs before using --delete.",
+                file=sys.stderr,
+            )
+            return 2
+        if candidates and len(unused) / len(candidates) >= UNUSED_RATIO_ABORT and not args.force:
+            pct = (len(unused) / len(candidates)) * 100
+            print(
+                f"error: refusing to delete — {len(unused)}/{len(candidates)} "
+                f"({pct:.0f}%) of images look unused (>= {UNUSED_RATIO_ABORT:.0%}). "
+                "Re-check guide refs, or pass --force if this is intentional.",
+                file=sys.stderr,
+            )
+            return 2
 
     total = 0
     deleted = 0

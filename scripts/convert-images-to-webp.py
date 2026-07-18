@@ -18,6 +18,8 @@ from guide_images import (  # noqa: E402
     CONVERTIBLE_EXTENSIONS,
     collect_image_refs,
     format_bytes,
+    normalize_image_ref,
+    repair_mdx_image_prefixes,
     repo_root_from,
 )
 
@@ -53,7 +55,12 @@ def convert_to_webp(
 
 
 def webp_ref(ref: str) -> str:
-    return str(Path(ref).with_suffix(".webp")).replace("\\", "/")
+    """Swap extension to .webp without Path normalization (keeps './' on Windows)."""
+    normalized = normalize_image_ref(ref)
+    stem, sep, _ext = normalized.rpartition(".")
+    if not sep or "/" in _ext or "\\" in _ext:
+        raise ValueError(f"ref has no file extension: {ref!r}")
+    return f"{stem}.webp"
 
 
 def rewrite_guide(guide_path: Path, replacements: dict[str, str], *, dry_run: bool) -> int:
@@ -105,6 +112,16 @@ def main() -> int:
         return 2
 
     root = (args.root or repo_root_from(__file__)).resolve()
+
+    repaired_files, repaired_refs = repair_mdx_image_prefixes(root, dry_run=args.dry_run)
+    if repaired_files:
+        action = "Would repair" if args.dry_run else "Repaired"
+        print(
+            f"{action} ./ prefix on {repaired_refs} image ref(s) "
+            f"across {repaired_files} guide(s)."
+        )
+        print()
+
     refs = collect_image_refs(root, extensions=CONVERTIBLE_EXTENSIONS)
 
     by_source: dict[Path, list] = defaultdict(list)
@@ -171,7 +188,12 @@ def main() -> int:
                 sources_to_delete.append(source)
 
             for ref in source_refs:
-                guide_replacements[ref.guide_path][ref.ref] = new_ref
+                # Replace the exact MDX text; also cover normalized form if they differ.
+                guide_replacements[ref.guide_path][ref.raw_ref] = (
+                    new_ref if ref.raw_ref.startswith("./") else new_ref.removeprefix("./")
+                )
+                if ref.raw_ref != ref.ref:
+                    guide_replacements[ref.guide_path][ref.ref] = new_ref
             converted += 1
         except Exception as exc:  # noqa: BLE001 - report and continue batch
             print(f"  FAIL {rel}: {exc}", file=sys.stderr)

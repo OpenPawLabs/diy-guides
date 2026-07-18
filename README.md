@@ -42,6 +42,10 @@ python scripts/cleanup-unused-images.py --rasters-only
 # Delete unused rasters (non-rasters need an extra flag)
 python scripts/cleanup-unused-images.py --delete
 python scripts/cleanup-unused-images.py --delete --include-non-rasters
+
+# --delete aborts if nothing looks referenced, or if ≥50% of images
+# look unused (pass --force only after reviewing that report)
+python scripts/cleanup-unused-images.py --delete --force
 ```
 
 Suggested workflow: convert referenced images, review the cleanup report, then delete unused files.
