@@ -1,0 +1,101 @@
+import {
+  Callout,
+  GuideLayout,
+  GuideStep,
+  GuideStepList,
+  LinkButton,
+  MediaFigure,
+  ToolList,
+} from "@openpawlabs/diy-guides-ui";
+
+<GuideLayout>
+
+  <GuideLayout.Header
+    title="Dock Assembly"
+    heroImage="./images/img-4638.webp"
+    difficulty="easy"
+    timeEstimate="5 minutes"
+    meta="Draft"
+  />
+
+  <GuideLayout.Intro>
+     
+  </GuideLayout.Intro>
+
+  <GuideLayout.Sidebar>
+    <ToolList title="Tools">
+      <ToolList.Item name="Philips Screwdriver (PH1)" quantity={1} />
+    </ToolList>
+  </GuideLayout.Sidebar>
+
+  <GuideLayout.Content>
+    <GuideStepList>
+      <GuideStep title="Gather Materials">
+        <GuideStep.Media>
+          <MediaFigure src="./images/img-4636-2.webp" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet>
+            Replace this placeholder instruction with the first action.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Put Charging PCB in Case">
+        <GuideStep.Media>
+          <MediaFigure src="./images/img-4637.webp" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet>
+            Add an instruction.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Put Case Top on">
+        <GuideStep.Media>
+          <MediaFigure src="./images/img-4638-1.webp" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet>
+            Add an instruction.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Screw together">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/img-4641.webp"
+            annotations={[
+              { type: "circle", x: 32.91, y: 9.61, radius: 2.78, color: "RED" },
+              { type: "circle", x: 70.64, y: 9.73, radius: 2.83, color: "RED" },
+              { type: "circle", x: 51.78, y: 27.6, radius: 2.83, color: "RED" },
+              { type: "circle", x: 51.69, y: 62.62, radius: 2.77, color: "RED" },
+              { type: "circle", x: 35.01, y: 84.26, radius: 2.73, color: "RED" },
+              { type: "circle", x: 68.36, y: 84.38, radius: 2.58, color: "RED" },
+            ]}
+          />
+          <MediaFigure src="./images/img-4640.webp" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet>
+            Flip the dock over to access the back
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="RED">
+            Use 6 x M2 8mm screws to connect the dock case together
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Dock Complete!">
+        <GuideStep.Media>
+          <MediaFigure src="./images/trackers-transparent-img-4525.webp" />
+          <MediaFigure src="./images/dock-w-case-transparent-img-4436.webp" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="GREEN">
+            You are done! Go ahead and dock all of your trackers into the dock!
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+    </GuideStepList>
+  </GuideLayout.Content>
+
+</GuideLayout>
