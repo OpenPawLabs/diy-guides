@@ -11,25 +11,29 @@ import {
 
   <GuideLayout.Header
     title="Project Overview"
-    heroImage="./images/trackers-with-dock-wip-1.png"
+    heroImage="images/dock-w-pcb-angled-transparent-img-4545.webp"
     difficulty="easy"
     timeEstimate="15 minutes"
     meta=""
   />
 
   <GuideLayout.Intro>
-    Building your own trackers is very simple and has a few basic steps that you will need to follow. This is a brief overview of each of the step-groups you will need to perform in order to build your own trackers from scratch! By the end of this guide you should have all the materials and tools collected for the rest of the other guides.
+    Building your own trackers is very simple and has a few basic steps that you will need to follow. 
+    
+    By the end of this guide you should have all the materials and tools all ready to follow the rest of the guides!
   </GuideLayout.Intro>
 
   <GuideLayout.Sidebar>
     <ToolList title="Tools">
-      <ToolList.Item name="3D Printer" quantity={1} thumbnail="./images/3d-printer.jpg" />
-      <ToolList.Item name="Philips Screwdriver (PH1)" quantity={1} thumbnail="./images/stanley-essential-phillips-short-screwdriver-24-pcs.jpg" />
+      <ToolList.Item name="3D Printer" quantity={1} thumbnail="images/3d-printer.webp" />
+      <ToolList.Item name="Philips Screwdriver (PH1)" quantity={1} thumbnail="images/img-4713-1.webp" />
     </ToolList>
     <ToolList title="Materials">
-      <ToolList.Item name="Tracker Boards" quantity={8} href="https://openpawlabs.com/shop/slimevr" price="$25/ea" thumbnail="./images/img-4400-edit.png" />
-      <ToolList.Item name="Charging Dock Board" quantity={1} href="https://openpawlabs.com/shop/slimevr-dock" price="$25" thumbnail="./images/charging-dock-tmp.jpg" />
-      <ToolList.Item name="PLA Filament (250g)" quantity={1} price="$10" thumbnail="./images/pla-filament.jpg" />
+      <ToolList.Item name="Tracker Boards" quantity={8} href="https://openpawlabs.com/products/diy-slimevr-tracker#kit" price="$25/ea" thumbnail="images/img-4400-edit.webp" />
+      <ToolList.Item name="Batteries (903035 w/ JST PH2.0 connector)" quantity={8} href="https://openpawlabs.com/products/diy-slimevr-tracker#kit" price="$16" thumbnail="images/battery-1000mah-side-bend-transparent-cropped-img-4592-1.webp" />
+      <ToolList.Item name="Charging Dock Board" quantity={1} href="https://openpawlabs.com/products/diy-slimevr-tracker#kit" price="$25" thumbnail="images/dock-pcb-transparent-img-4443-1.webp" />
+      <ToolList.Item name="PLA Filament (~240g)" quantity={1} price="$10" thumbnail="images/img-4718-1.webp" />
+      <ToolList.Item name="PETG Filament (~55g)" quantity={1} price="$5" thumbnail="images/img-4719-1.webp" />
     </ToolList>
   </GuideLayout.Sidebar>
 
@@ -38,20 +42,18 @@ import {
       <GuideStep title="Gather Tools">
         <GuideStep.Media>
           <MediaFigure
-            src="./images/3d-printer-large.jpg"
-            displayRegion={{ x: 0, y: 267, width: 1940 }}
+            src="images/img-4713.webp"
+            displayRegion={{ x: 583, y: 385, width: 2761 }}
             annotations={[
-              { type: "point", x: 48.61, y: 54.88, label: "3D Printer", color: "LIGHT_BLUE" },
+              { type: "rectangle", x1: 27.62, y1: 61.96, x2: 57.78, y2: 77.55, color: "GREEN", title: "Philips PH1" },
             ]}
           />
           <MediaFigure
-            src="./images/stanley-essential-phillips-short-screwdriver-24-pcs-1.jpg"
-            annotations={[
-              { type: "point", x: 30.65, y: 36.19, label: "Philips PH1", color: "GREEN" },
-            ]}
+            src="images/img-4710.webp"
+            displayRegion={{ x: 299, y: 86, width: 3329 }}
           />
           <MediaFigure
-            src="./images/makerspace-map-preview.jpg"
+            src="images/makerspace-map-preview.webp"
             annotations={[
               { type: "point", x: 78.86, y: 59.99, label: "Makerspace Map", color: "RED" },
             ]}
@@ -62,67 +64,78 @@ import {
             Building your trackers requires very few tools, we tried to design them to need as few tools as possible to make it extra simple!
           </GuideStep.Bullet>
           <GuideStep.Bullet color="GREEN">
-            Grab a Philips Screwdriver, you will want this to be a **PH1 tip** but you can also use the smaller PH0 screwdriver, but the screws included in the kit are PH1.
+            Grab a Philips Screwdriver, you will want this to be a **PH1 tip**. You can also use a smaller PH0 screwdriver, but the screws included in the kit are PH1.
           </GuideStep.Bullet>
           <GuideStep.Bullet color="LIGHT_BLUE">
             You will need a 3D Printer or access to one. If you don't have a 3D Printer we suggest **asking a friend** for help!
           </GuideStep.Bullet>
           <GuideStep.Bullet color="RED">
-            If you can't find a friend to help, we suggest checking if your **school or library** might have a 3D printer you can use! You can also see if your **local Makerspace** could let you use one!
+            If you can't find a friend to help, we suggest checking if your **school or library** might have a 3D printer you can use! You can also see if your **[local Makerspace](https://makerspace.com/map/)** could let you use one!
           </GuideStep.Bullet>
           <GuideStep.Bullet variant="button">
             <LinkButton>
               <LinkButton.Item href="https://makerspace.com/map/" external>Find a Makerspace here!</LinkButton.Item>
             </LinkButton>
           </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            **If you do not have access to a 3D printer at all, you can purchase pre-printed parts on our [Kit Configurator](https://openpawlabs.com/products/diy-slimevr-tracker#kit)**. We highly recommend you ask around to save yourself some money though!
+          </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Gather Materials">
+      <GuideStep title="Gather Boards &amp; Batteries">
         <GuideStep.Media>
           <MediaFigure
-            src="./images/tracker-board-transparent-1080.png"
+            src="images/tracker-board-transparent-1080.webp"
             displayRegion={{ x: 214, y: 39, width: 841 }}
-            annotations={[
-              { type: "point", x: 81.86, y: 44.64, label: "Tracker Board", color: "LIGHT_BLUE" },
-            ]}
           />
-          <MediaFigure src="./images/charging-dock-md.png" />
+          <MediaFigure src="images/dock-pcb-transparent-img-4443.webp" />
           <MediaFigure
-            src="./images/pla-filament-2.jpg"
-            displayRegion={{ x: 0, y: 240, width: 1000 }}
-            annotations={[
-              { type: "point", x: 46.22, y: 39.53, label: "PLA Filament", color: "GREEN" },
-            ]}
+            src="images/battery-1000mah-side-bend-transparent-img-4592.webp"
+            displayRegion={{ x: 1085, y: 803, width: 1111 }}
           />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet color="GREEN">
-            Make sure you have at least 250g of PLA Filament in the color(s) you would like the trackers to be.
-          </GuideStep.Bullet>
           <GuideStep.Bullet color="LIGHT_BLUE">
             Buy assembled the Tracker Boards, you will need one board for each tracker you plan to build!
           </GuideStep.Bullet>
           <GuideStep.Bullet color="YELLOW">
             Be sure to also buy a Charging Dock board if you plan to build one. Each dock charges up to 8 trackers.
           </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            You will also need batteries for each tracker you are building. If you buy these from us they come with a JST (PH2.0) connector for easy connection to the tracker board!
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="MAGENTA">
+            We include all the screws you will need inside of the kit when you purchase!
+          </GuideStep.Bullet>
           <GuideStep.Bullet variant="button">
             <LinkButton>
-              <LinkButton.Item href="https://openpawlabs.com/shop/slimevr" external>Buy Tracker/Dock Boards</LinkButton.Item>
+              <LinkButton.Item href="https://openpawlabs.com/products/diy-slimevr-tracker#kit" external>Buy Trackers, Dock, & Batteries</LinkButton.Item>
+            </LinkButton>
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            **If you live in a location we are unable to ship batteries to you will need to purchase the batteries separate!** Use one of the links below to buy the **803035** OR **903035** batteries from a 3rd party seller. If you are unable to find batteries with the correct connector (JST PH2.0) then you will **need a soldering iron** to attach the batteries!
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="https://www.aliexpress.com/item/3256811425222552.html?pdp_ext_f=%7B%22sku_id%22%3A%2212000056055768607%22%7D">AliExpress 803035 w/ JST PH2.0</LinkButton.Item>
+              <LinkButton.Item href="https://www.aliexpress.us/item/3256807581519732.html">AliExpress 903035 (NO CONNECTOR)</LinkButton.Item>
+              <LinkButton.Item href="https://www.aliexpress.com/item/2251832771334312.html?pdp_ext_f=%7B%22sku_id%22%3A%2212000047919040336%22%7D">AliExpress 903035 (NO CONNECTOR)</LinkButton.Item>
+              <LinkButton.Item href="https://www.aliexpress.com/item/3256805794073404.html?pdp_ext_f=%7B%22sku_id%22%3A%2212000036646594619%22%7D">AliExpress 803035 (NO CONNECTOR)</LinkButton.Item>
+              <LinkButton.Item href="https://www.aliexpress.com/item/3256811701937866.html?pdp_ext_f=%7B%22sku_id%22%3A%2212000056901392718%22%7D">AliExpress 803035 (NO CONNECTOR)</LinkButton.Item>
             </LinkButton>
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Get Straps or DIY Materials">
+      <GuideStep title="Get Straps">
         <GuideStep.Media>
           <MediaFigure
-            src="./images/vyrovr-comfort-straps.jpg"
+            src="images/vyrovr-comfort-straps.webp"
             annotations={[
               { type: "point", x: 50.11, y: 47.61, label: "Comfort Straps", color: "GREEN" },
             ]}
           />
-          <MediaFigure src="./images/diy-strap-set-placeholder.png" />
           <MediaFigure
-            src="./images/diy-strap-material.jpg"
+            src="images/diy-strap-material.webp"
             displayRegion={{ x: 0, y: 201, width: 960 }}
             annotations={[
               { type: "point", x: 50.61, y: 65.18, label: "DIY Straps", color: "LIGHT_BLUE" },
@@ -149,7 +162,7 @@ import {
             </LinkButton>
           </GuideStep.Bullet>
           <GuideStep.Bullet color="LIGHT_BLUE">
-            If you are on a budget, you can also build your own DIY Straps for around $12, making it very affordable. They work pretty well, and you can always buy nicer straps later. 
+            If you are on a tight budget, you can also build your own DIY Straps for around $12, making it very affordable. They work pretty well, and you can always buy nicer straps later. 
             
             You will want it to be around ~30mm (1.2in) wide. You can find some options here:
           </GuideStep.Bullet>
@@ -160,10 +173,41 @@ import {
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
+      <GuideStep title="Get 3D Printer Filament">
+        <GuideStep.Media>
+          <MediaFigure src="images/img-4722.webp" />
+          <MediaFigure
+            src="images/img-4718.webp"
+            annotations={[
+              { type: "rectangle", x1: 19.66, y1: 26.3, x2: 86.92, y2: 71.31, color: "LIGHT_BLUE" },
+            ]}
+          />
+          <MediaFigure
+            src="images/img-4719.webp"
+            annotations={[
+              { type: "rectangle", x1: 25.28, y1: 26.89, x2: 92.39, y2: 71.99, color: "GREEN" },
+            ]}
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet>
+            For the later steps of the guide you will need to get some filament for your 3D printer, here is the exact amounts you need!
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            **PLA Filament:** ~240g
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            **PETG Filament:** ~55g
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            The **PETG Filament** is recommended to print out the Tracker Slide Mounts for the Straps so that they never wear out. If you **do not have access to PETG** you _can_ print out the Strap Slide Mounts with PLA but we do not recommend it since PLA fatigues over time.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
       <GuideStep title="You are ready!">
         <GuideStep.Media>
-          <MediaFigure src="./images/all-materials.png" />
-          <MediaFigure src="./images/party-face-emoji-big.png" />
+          <MediaFigure src="images/img-4715.webp" />
+          <MediaFigure src="images/party-face-emoji-big.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
           <GuideStep.Bullet color="GREEN">
