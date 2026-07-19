@@ -71,3 +71,18 @@ python scripts/cleanup-unused-images.py --delete --force
 ```
 
 Suggested workflow: convert referenced images, review the cleanup report, then delete unused files.
+
+### Responsive size variants (build hosts, not this repo)
+
+Do **not** commit thumbnail derivatives here. The docs site (and other publishers) run
+[`diy-guide-images`](https://github.com/OpenPawLabs/diy-guides-ui-react) from
+`@openpawlabs/diy-guides-ui` after syncing this tree, writing AVIF width variants
+under `images/thumbnails/` (plus `variants.json`). Authors only commit canonical
+sources under each guide’s `images/` folder. Delete `images/thumbnails/` locally
+to force a regenerate.
+
+To preview locally:
+
+```bash
+pnpm --dir ../diy-guides-ui-react exec diy-guide-images ./bb-lsm6dsv/0-overview
+```

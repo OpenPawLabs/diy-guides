@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from pathlib import Path
 
@@ -21,6 +22,36 @@ from guide_images import (  # noqa: E402
 )
 
 UNUSED_RATIO_ABORT = 0.5
+
+# Build-time derivatives from diy-guide-images — treat as used when the canonical exists.
+VARIANT_NAME_RE = re.compile(r"^.+\.w\d+\.avif$", re.IGNORECASE)
+
+
+def is_derived_asset(path: Path, referenced: set[Path]) -> bool:
+    # images/thumbnails/* — keep when a matching (or any) canonical lives in images/
+    if path.parent.name == "thumbnails":
+        images_dir = path.parent.parent
+        if path.name == "variants.json":
+            return any(ref.parent.resolve() == images_dir.resolve() for ref in referenced)
+        if not VARIANT_NAME_RE.match(path.name):
+            return False
+        stem = path.name.rsplit(".w", 1)[0]
+        for ref in referenced:
+            if ref.parent.resolve() == images_dir.resolve() and ref.stem == stem:
+                return True
+        return False
+
+    # Legacy flat layout (pre-thumbnails/) — keep if the canonical is referenced
+    if path.name == "variants.json":
+        return True
+    if not VARIANT_NAME_RE.match(path.name):
+        return False
+    stem = path.name.rsplit(".w", 1)[0]
+    parent = path.parent
+    for ref in referenced:
+        if ref.parent.resolve() == parent.resolve() and ref.stem == stem:
+            return True
+    return False
 
 
 def main() -> int:
@@ -80,7 +111,7 @@ def main() -> int:
             if args.rasters_only and path.suffix.lower() not in RASTER_EXTENSIONS:
                 continue
             candidates.append(path)
-            if path.resolve() not in referenced:
+            if path.resolve() not in referenced and not is_derived_asset(path, referenced):
                 unused.append(path)
 
     print(f"Root: {root}")
