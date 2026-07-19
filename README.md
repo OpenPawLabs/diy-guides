@@ -2,6 +2,28 @@
 
 Contains all of our DIY guides written for OpenPawLabs! Help fix/contribute today!
 
+## Project manifests
+
+Each project folder (for example `bb-lsm6dsv/`) includes a `project.json` that is the source of truth for:
+
+- Project title and description
+- **Ordered** list of guides shown on the docs site (cards, prev/next, progress)
+- Per-guide card descriptions, plus `optional` / `shared` flags
+- Optional route `slug` overrides (used for shared `common/` guides)
+
+Guide display fields (`title`, `difficulty`, `timeEstimate`, `heroImage`, steps) still come from each guide’s `guide.mdx` header — do not duplicate titles in the manifest.
+
+### Conventions
+
+| Field | Meaning |
+|-------|---------|
+| `overview` | Project-relative path of the guide whose hero backs the project card |
+| `guides[].path` | Project-relative for local guides (`0-overview`), or repo-root-relative for shared guides (`common/…`) |
+| `guides[].slug` | Defaults to the final path segment; set only when the URL should differ |
+| Array order | Site order |
+
+When you add, remove, or reorder guides, edit `project.json` in the same change. Folders not listed in the manifest stay invisible on the site (useful for WIP drafts). The docs site validates that every listed path has a `guide.mdx`.
+
 ## Image scripts
 
 Guides reference local rasters under each guide’s `images/` folder. Two scripts help keep those assets small and tidy.

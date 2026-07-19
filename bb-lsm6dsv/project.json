@@ -1,0 +1,41 @@
+{
+  "id": "bb-lsm6dsv",
+  "title": "DIY SlimeVR Trackers",
+  "description": "Build your own SlimeVR-compatible full-body trackers with OpenPaw Labs hardware, 3D-printed cases, and step-by-step assembly guides.",
+  "overview": "0-overview",
+  "guides": [
+    {
+      "path": "0-overview",
+      "description": "Materials, tools, and a high-level walkthrough of every step in this project."
+    },
+    {
+      "path": "1-3d-prints",
+      "description": "Walks the user through 3D printing all the components required for later guides."
+    },
+    {
+      "path": "2-tracker-assembly",
+      "description": "Assemble the trackers — batteries, screws, and cases."
+    },
+    {
+      "path": "3-dock-assembly",
+      "description": "Assemble the charging dock for your trackers."
+    },
+    {
+      "path": "4-strap-assembly",
+      "description": "Optional guide for creating your own low-cost DIY straps.",
+      "optional": true
+    },
+    {
+      "path": "common/0-onetime-tracker-setup",
+      "slug": "onetime-setup",
+      "description": "One-time setup steps for your trackers in SlimeVR and VRChat.",
+      "shared": true
+    },
+    {
+      "path": "common/1-vrchat-use",
+      "slug": "vrchat-use",
+      "description": "Steps required in VRChat every time you use your trackers.",
+      "shared": true
+    }
+  ]
+}
