@@ -6,15 +6,15 @@
   "guides": [
     {
       "path": "0-overview",
-      "description": "Materials, tools, and a high-level walkthrough of every step in this project."
+      "description": "Gather the tools and materials you'll need for this project, and find a 3D printer to use."
     },
     {
       "path": "1-3d-prints",
-      "description": "Walks the user through 3D printing all the components required for later guides."
+      "description": "3D print all the components required for later guides."
     },
     {
       "path": "2-tracker-assembly",
-      "description": "Assemble the trackers — batteries, screws, and cases."
+      "description": "Assemble the trackers using the batteries, screws, and cases."
     },
     {
       "path": "3-dock-assembly",
@@ -22,20 +22,17 @@
     },
     {
       "path": "4-strap-assembly",
-      "description": "Optional guide for creating your own low-cost DIY straps.",
-      "optional": true
+      "description": "Attach the tracker mounts to the straps."
     },
     {
       "path": "common/0-onetime-tracker-setup",
       "slug": "onetime-setup",
-      "description": "One-time setup steps for your trackers in SlimeVR and VRChat.",
-      "shared": true
+      "description": "One-time setup of the trackers in SlimeVR and VRChat settings."
     },
     {
       "path": "common/1-vrchat-use",
       "slug": "vrchat-use",
-      "description": "Steps required in VRChat every time you use your trackers.",
-      "shared": true
+      "description": "How to use your trackers in VRChat."
     }
   ]
 }
