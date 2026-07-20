@@ -12,35 +12,104 @@ import {
 
   <GuideLayout.Header
     title="Strap Assembly"
-    heroImage="./images/8-case-3dfile-screenshot.webp"
+    heroImage="./images/img-4657-2.webp"
     difficulty="easy"
-    timeEstimate="30 minutes"
-    meta="Draft"
+    timeEstimate="5 minutes"
+    meta=""
   />
 
   <GuideLayout.Intro>
-    Replace this intro with a short overview of what the guide helps readers do.
+    Attach all of the tracker slide mounts onto your straps!
   </GuideLayout.Intro>
 
-  <GuideLayout.Sidebar>
-    <ToolList title="Tools">
-      <ToolList.Item name="Add a required tool" quantity={1} />
-    </ToolList>
-  </GuideLayout.Sidebar>
-
   <GuideLayout.Content>
-    <Callout type="note" title="Before you begin">
-      Add any important setup notes, warnings, or context here.
-    </Callout>
-
     <GuideStepList>
-      <GuideStep title="Describe the first step">
+      <GuideStep title="Gather Materials">
         <GuideStep.Media>
-          <MediaFigure src="./images/placeholder.jpg" />
+          <MediaFigure src="./images/img-4644.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Replace this placeholder instruction with the first action.
+          <GuideStep.Bullet color="GREEN">
+            Grab your Straps and the Tracker Slide Mounts.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            If you do not have Straps you either need to buy 3rd party straps (recommended), or you need to follow the optional guide to assemble your DIY Straps.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            If you do not have Straps we recommend you buy a set of straps from VYR0 VR or another community creator! Any pre-made straps should work just fine. The tracker mounts are designed to fit 30mm straps.
+            <br />
+            Community strap recommendations:
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="https://vyrovr.com/products/10-elastic-full-body-tracker-straps" external>($28) VYR0 VR Full Body Strap Set</LinkButton.Item>
+            </LinkButton>
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="https://vyrovr.com/products/vyro-vr-comfort-strap-bundles?variant=45071132196943" external>($156) VYRO VR Comfort Strap Bundle</LinkButton.Item>
+            </LinkButton>
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Open Strap">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/img-4645.webp"
+            displayRegion={{ x: 5.6, y: 1.92, width: 87.64 }}
+          />
+          <MediaFigure
+            src="./images/img-4646.webp"
+            displayRegion={{ x: 9.55, y: 3.42, width: 90.45 }}
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="GREEN">
+            Undo the velcro on the strap and grab one of the tracker mounts.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Attach Tracker Mount">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/img-4647-2.webp"
+            displayRegion={{ x: 23.99, y: 17.15, width: 71.26 }}
+          />
+          <MediaFigure
+            src="./images/img-4650.webp"
+            displayRegion={{ x: 12.99, y: 5.1, width: 72.38 }}
+          />
+          <MediaFigure
+            src="./images/img-4652.webp"
+            displayRegion={{ x: 9.48, y: 3.74, width: 89.58 }}
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="GREEN">
+            Thread the strap through each hole so that it is running along the back of the tracker mount.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Attach the velcro back down to the strap
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Repeat for all Straps">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/img-4653.webp"
+            displayRegion={{ x: 5.48, y: 0.18, width: 89.33 }}
+          />
+          <MediaFigure
+            src="./images/img-4656-2.webp"
+            displayRegion={{ x: 11.42, y: 2.25, width: 88.58 }}
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="GREEN">
+            Attach the tracker mounts to each strap
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            You are done and ready to move on to setting up SlimeVR/VRChat!
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
