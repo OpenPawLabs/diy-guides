@@ -19,51 +19,100 @@ import {
   />
 
   <GuideLayout.Intro>
-    Replace this intro with a short overview of what the guide helps readers do.
+    Follow these steps to assemble each of your trackers. This should take roughly 30 minutes total, even going slow.
   </GuideLayout.Intro>
 
   <GuideLayout.Sidebar>
     <ToolList title="Tools">
-      <ToolList.Item name="Add a required tool" quantity={1} />
+      <ToolList.Item name="Philips Screwdriver (PH1)" quantity={1} thumbnail="./images/img-4713.webp" />
     </ToolList>
   </GuideLayout.Sidebar>
 
   <GuideLayout.Content>
-    <Callout type="note" title="Before you begin">
-      Add any important setup notes, warnings, or context here.
-    </Callout>
-
     <GuideStepList>
       <GuideStep title="Gather Parts">
         <GuideStep.Media>
-          <MediaFigure src="./images/img-4599-2-1.webp" />
+          <MediaFigure
+            src="./images/img-4599-2-1.webp"
+            displayRegion={{ x: 14.14, y: 15.83, width: 71.17 }}
+          />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add instruction here...
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Grab all of the parts to assemble one tracker along with your Screwdriver.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="RED">
+            **You will need:**
+            
+            1 x Tracker Board
+            
+            1 x Battery (903035 w/ PH2.0 connector)
+            
+            2 x M2 8mm Screws (Self Tapping), included in Kit
+            
+            1 x Tracker Case
+            
+            1 x Tracker Label Lid
+            
+            1 x Tracker Power Switch
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
       <GuideStep title="Prepare Battery">
         <GuideStep.Media>
-          <MediaFigure src="./images/img-4600.webp" />
-          <MediaFigure src="./images/img-4601.webp" />
-          <MediaFigure src="./images/img-4602.webp" />
+          <MediaFigure
+            src="./images/img-4600.webp"
+            annotations={[
+              { type: "point", x: 63.18, y: 20.63, label: "1", color: "RED" },
+            ]}
+          />
+          <MediaFigure
+            src="./images/img-4601.webp"
+            annotations={[
+              { type: "point", x: 40.3, y: 15.21, label: "2", color: "GREEN" },
+            ]}
+          />
+          <MediaFigure
+            src="./images/img-4602.webp"
+            annotations={[
+              { type: "point", x: 73.87, y: 13.92, label: "3", color: "LIGHT_BLUE" },
+            ]}
+          />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet variant="note">
+            Grab your battery and prepare it by pre-bending the wire into the right shape for later. These bends will puts the connector exactly where it needs to be to connect to the tracker board and will make it easier to do Step 6.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="RED">
+            Start by placing the battery like you see in Image 1 with the wire coming out of the Right side of the battery. Bend the wire so that it goes towards the Left to match the first image
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            Bend the wire to match Image 2 by adding a bend back towards the left when the wire is in the center of the battery.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Bend the wire to match Image 3 by adding a bend so that the connector points at the Top Left corner of the battery.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
       <GuideStep title="Place Battery &amp; Power Switch in Case">
         <GuideStep.Media>
-          <MediaFigure src="./images/img-4609.webp" />
+          <MediaFigure
+            src="./images/img-4609.webp"
+            annotations={[
+              { type: "point", x: 68.98, y: 19.94, label: "2", color: "GREEN" },
+              { type: "point", x: 56.48, y: 72.2, label: "1", color: "LIGHT_BLUE" },
+              { type: "rectangle", x1: 59.7, y1: 55.52, x2: 79.35, y2: 78.47, color: "LIGHT_BLUE" },
+              { type: "rectangle", x1: 58.54, y1: 23.21, x2: 79.35, y2: 52.17, color: "GREEN" },
+            ]}
+          />
           <MediaFigure src="./images/img-4607.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Place the battery into the tracker case so that the wire is on the side with the opening for the USB-C port.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            Insert the Power Switch into the case.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -71,35 +120,64 @@ import {
         <GuideStep.Media>
           <MediaFigure
             src="./images/img-4614.webp"
-            displayRegion={{ x: 44.74, y: 25.0, width: 48.41 }}
+            displayRegion={{ x: 51.4, y: 36.54, width: 40.87 }}
+            annotations={[
+              { type: "rectangle", x1: 9.44, y1: 25.87, x2: 53.51, y2: 68.42, color: "YELLOW" },
+            ]}
+          />
+          <MediaFigure
+            src="./images/tracker-pcb-back.webp"
+            displayRegion={{ x: 29.14, y: 67.02, width: 70.86 }}
+          />
+          <MediaFigure
+            src="./images/battery-1000mah-side-bend-transparent-cropped-img-4592-2.webp"
+            displayRegion={{ x: 0, y: 0, width: 100 }}
           />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="YELLOW">
+            Gently connect the battery connector to the tracker board. Move on to the next step.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            If you **did not** buy batteries from **OpenPaw Labs** and your batteries **do not** have a connector you will need to solder them to the battery pads on the back of the board.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="caution">
+            If you bought batteries with a connector from somewhere **other than OpenPaw Labs** you need make sure that the **connector is wired correctly**! 
+            
+            Third party batteries sometimes come with the **wires reversed** and will **damage your tracker** if not fixed.
+            <br />
+            The Red Wire (+) needs to be on the **LEFT side** of the connector. 
+            
+            The Black Wire (-) needs to be on the **RIGHT side** of the connector.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Insert Tracker">
+      <GuideStep title="Insert Tracker at Angle">
         <GuideStep.Media>
           <MediaFigure
             src="./images/img-4615.webp"
             displayRegion={{ x: 35.42, y: 25.23, width: 54.84 }}
             annotations={[
-              { type: "rectangle", x1: 46.9, y1: 26.4, x2: 71.36, y2: 48.12, color: "YELLOW" },
+              { type: "rectangle", x1: 46.9, y1: 26.4, x2: 71.36, y2: 48.12, color: "GREEN" },
             ]}
           />
           <MediaFigure
             src="./images/img-4616-2.webp"
             displayRegion={{ x: 27.08, y: 12.43, width: 72.92 }}
             annotations={[
-              { type: "rectangle", x1: 57.41, y1: 33.61, x2: 75.52, y2: 63.32, color: "YELLOW" },
+              { type: "rectangle", x1: 57.41, y1: 33.61, x2: 75.52, y2: 63.32, color: "GREEN" },
             ]}
           />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet variant="caution">
+            If you do not insert the board at an angle like shown there is a small chance you might accidently break off the power switch!
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            Insert the tracker board at an angle, align the power switch on the tracker with the 3D printed power switch.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            This leaves the battery wire accessible for the next step.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -115,8 +193,11 @@ import {
           />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="GREEN">
+            While you hold the tracker at an angle, use your finger to bend the battery wire directly downwards behind the connector.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Fold the wire into the gap at the end of the case. The bends you did on Step 2 should make the wire already aligned properly.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -132,8 +213,11 @@ import {
           />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Keep the board at an angle so that you can see the battery wire and gently push the board down until it is resting all the way in the case.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            Adjust the battery wire as needed to keep it out of the way.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -157,8 +241,11 @@ import {
           />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="GREEN">
+            Use a Philips Screwdriver (PH1) to screw the tracker board down with 2 x **M2 8mm self tapping screws** that came with your tracker kit.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Continue to tighten the screws until the board is securely connected down and you feel them come to a stop.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -177,16 +264,24 @@ import {
           <MediaFigure src="./images/img-4632.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="GREEN">
+            Grab the tracker label/lid and align it with the Battery Connector.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="YELLOW">
+            Align the notch at the top of the tracker case with the notch on the tracker label/lid.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Push the tracker lid directly down into place until it comes to a stop. It should fit snugly in the tracker case.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
       <GuideStep title="Repeat for all trackers">
-        <GuideStep.Media />
+        <GuideStep.Media>
+          <MediaFigure src="./images/img-4734.webp" />
+        </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Repeat until all of your trackers have been assembled!
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
