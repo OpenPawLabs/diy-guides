@@ -15,16 +15,16 @@ import {
     heroImage="./images/img-4638.webp"
     difficulty="easy"
     timeEstimate="5 minutes"
-    meta="Draft"
+    meta=""
   />
 
   <GuideLayout.Intro>
-     
+    Assemble the Charging Dock.
   </GuideLayout.Intro>
 
   <GuideLayout.Sidebar>
     <ToolList title="Tools">
-      <ToolList.Item name="Philips Screwdriver (PH1)" quantity={1} />
+      <ToolList.Item name="Philips Screwdriver (PH1)" quantity={1} thumbnail="./images/img-4713.webp" />
     </ToolList>
   </GuideLayout.Sidebar>
 
@@ -35,22 +35,38 @@ import {
           <MediaFigure src="./images/img-4636-2.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Replace this placeholder instruction with the first action.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Grab all of the parts you need to build the Charging Dock
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="RED">
+            **You will need:**
+            
+            1 x Charging Dock Board
+            
+            6 x M2 8mm Screws (Self Tapping), included in Kit
+            
+            1 x Dock Case Top
+            
+            1 x Dock Case Bottom
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
       <GuideStep title="Put Charging PCB in Case">
         <GuideStep.Media>
-          <MediaFigure src="./images/img-4637.webp" />
+          <MediaFigure
+            src="./images/img-4637.webp"
+            annotations={[
+              { type: "circle", x: 54.7, y: 83.54, radius: 8.97, color: "GREEN" },
+            ]}
+          />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="GREEN">
+            Align the USB-C port with the notch on the case and push the charger board into the bottom of the Charging Dock case.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Put Case Top on">
+      <GuideStep title="Put on Case Top">
         <GuideStep.Media>
           <MediaFigure
             src="./images/img-4638-1.webp"
@@ -58,8 +74,8 @@ import {
           />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="GREEN">
+            Align the USB-C port cutouts and the top of the Charging Dock case on top of the charger board.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -78,11 +94,11 @@ import {
           />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Flip the dock over to access the back
+          <GuideStep.Bullet color="GREEN">
+            Grab your Philips PH1 Screwdriver
           </GuideStep.Bullet>
           <GuideStep.Bullet color="RED">
-            Use 6 x M2 8mm screws to connect the dock case together
+            Use 6 x M2 8mm screws to connect the Charging Dock case together
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -93,7 +109,7 @@ import {
         </GuideStep.Media>
         <GuideStep.Bullets>
           <GuideStep.Bullet color="GREEN">
-            You are done! Go ahead and dock all of your trackers into the dock!
+            You are done! Go ahead and place all of your trackers into the Charging Dock.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
