@@ -12,13 +12,14 @@ import {
   <GuideLayout.Header
     title="3D Print Parts"
     heroImage="./images/img-4581.webp"
+    heroImageAlt="A full set of 3D printed parts including everything you need to build your trackers!"
     difficulty="easy"
     timeEstimate="9 hours (Printing)"
-    meta="Draft"
+    meta=""
   />
 
   <GuideLayout.Intro>
-    Get everything required for the rest of the guides 3D Printed! This step takes the longest, but will make you breeze through the rest of the tasks!
+    Get everything required for the rest of the guides 3D Printed! This step takes the longest, but will make you breeze through the rest of the tasks.
   </GuideLayout.Intro>
 
   <GuideLayout.Sidebar>
@@ -26,7 +27,8 @@ import {
       <ToolList.Item name="3D Printer" quantity={1} thumbnail="./images/3d-printer.webp" />
     </ToolList>
     <ToolList title="Materials">
-      <ToolList.Item name="PLA Filament (250g)" quantity={1} thumbnail="./images/pla-filament.webp" />
+      <ToolList.Item name="PLA Filament (240g)" quantity={1} thumbnail="./images/img-4718.png" />
+      <ToolList.Item name="PETG Filament (55g)" quantity={1} thumbnail="./images/img-4719.png" />
     </ToolList>
   </GuideLayout.Sidebar>
 
@@ -36,8 +38,9 @@ import {
         <GuideStep.Media>
           <MediaFigure
             src="./images/3mf-print-overview-1.webp"
-            displayRegion={{ x: 4.1, y: 0.0, width: 91.81 }}
+            displayRegion={{ x: 4.1, y: 0, width: 91.81 }}
           />
+          <MediaFigure src="./images/img-4722.png" />
         </GuideStep.Media>
         <GuideStep.Bullets>
           <GuideStep.Bullet color="LIGHT_BLUE">
@@ -70,7 +73,7 @@ import {
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Print Tracker Cases (2h30m)">
+      <GuideStep title="Tracker Cases (2.5 hours)">
         <GuideStep.Media>
           <MediaFigure
             src="./images/tracker-cases-print.webp"
@@ -78,7 +81,7 @@ import {
           />
           <MediaFigure
             src="./images/tracker-cases.webp"
-            displayRegion={{ x: 5.13, y: 0.0, width: 92.55 }}
+            displayRegion={{ x: 5.13, y: 0, width: 92.55 }}
           />
           <MediaFigure
             src="./images/openpaw-tracker-case-v7.step"
@@ -87,69 +90,114 @@ import {
         </GuideStep.Media>
         <GuideStep.Bullets>
           <GuideStep.Bullet color="LIGHT_BLUE">
-            Print out Plate 1 which has a full set of cases. This will take 2.5 hours.
+            Print out Plate 1 which has a full set of cases. This will take ~2.5 hours.
           </GuideStep.Bullet>
           <GuideStep.Bullet color="GREEN">
             You will need to print out 1 tracker case for each tracker.
           </GuideStep.Bullet>
           <GuideStep.Bullet variant="note">
-            **79g of filament**
+            **79g of PLA filament**
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Tracker Lids/Labels">
+      <GuideStep title="Power Switches (12 min)">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/img-4574.webp"
+            displayRegion={{ x: 22.58, y: 20.43, width: 59.73 }}
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Print out Plate 2 which has a set of power switches. This will take **~12 min**.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            **1.5g of PLA filament**
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Tracker Lids/Labels (2 hours)">
         <GuideStep.Media>
           <MediaFigure src="./images/img-4568.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
           <GuideStep.Bullet color="LIGHT_BLUE">
-            Print out labels for each of your trackers by downloading the .3mf file and choosing which tracker labels you want!
-          </GuideStep.Bullet>
-          <GuideStep.Bullet>
-            Files are provided for both single color printing, and multi-color printing! We recommend the multi-color printing
-          </GuideStep.Bullet>
-          <GuideStep.Bullet variant="button">
-            <LinkButton>
-              <LinkButton.Item href="" download>Download .3mf (One Color) upload me...</LinkButton.Item>
-            </LinkButton>
+            Print out Plate 3 which has a set of 10 labels for you to choose from. This will take 2 hours to print.
           </GuideStep.Bullet>
           <GuideStep.Bullet color="YELLOW">
-            Multi-Color prints only have a single color change making them highly efficient! (They also look way cooler!!)
+            This Multi-Color print only has **a single color swap**, making it efficient and simple to print.
+            <br />
+            You can print this with an AMS or even use a single color printer. Single color printers will pause halfway through the print for you to switch the filament from the base color over to the label color, then will resume the print!
           </GuideStep.Bullet>
-          <GuideStep.Bullet variant="button">
-            <LinkButton>
-              <LinkButton.Item href="" download>Download .3mf (Multi-Color) upload me...</LinkButton.Item>
-            </LinkButton>
-          </GuideStep.Bullet>
-        </GuideStep.Bullets>
-      </GuideStep>
-      <GuideStep title="Tracker Power Switches">
-        <GuideStep.Media>
-          <MediaFigure src="./images/img-4574.webp" />
-        </GuideStep.Media>
-        <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet variant="note">
+            **Base Color PLA Filament:** 42g
+            
+            **Label Color PLA Filament:** 7g
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Charging Dock Case">
+      <GuideStep title="Charging Dock Case (2.5 hours)">
         <GuideStep.Media>
           <MediaFigure src="./images/img-4562.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Print out Plate 4 which has the parts for the Charging Dock. This will take roughly 2.5 hours.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            **102g of PLA Filament**
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Tracker Slide Mounts for Straps">
+      <GuideStep title="Tracker Mounts for Straps (1.5 hours)">
         <GuideStep.Media>
           <MediaFigure src="./images/img-4579.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Print out Plate 5 which has a set of Slide Mounts for you to attach to your Straps. This will take 1.5 hours.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            **53g of PETG Filament**
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="RED">
+            **We highly recommend you print these using PETG filament.** You **can** alternatively print these with PLA if you **do not** have access to PETG but there is a chance of the mounts weakening after a few hundred sessions of repeated use.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="(Optional) DIY Strap Hardware">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/diy-strap-hardware.jpg"
+            displayRegion={{ x: 6.06, y: 8.09, width: 87.06 }}
+          />
+          <MediaFigure
+            src="./images/glide-slide-v1.step"
+            type="model"
+          />
+          <MediaFigure
+            src="./images/3-way-glide-slide-v1.step"
+            type="model"
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet variant="note">
+            This step is **Optional** and you **only** need these parts if you are making your own DIY straps from scratch!
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Download the .3mf file below and print out a set of DIY Strap Hardware. It includes all the hardware needed for a full set of 8 straps (including Chest Harness).
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="./files/diy-strap-hardware.3mf" download>Download .3mf for DIY Straps</LinkButton.Item>
+              <LinkButton.Item href="./files/glide-slide-v1.step" download>Download .step for Strap Slide</LinkButton.Item>
+              <LinkButton.Item href="./files/3-way-glide-slide-v1.step" download>Download .step for 3-way Strap Slide</LinkButton.Item>
+              <LinkButton.Item href="./files/latch-30mm-a-moderahn.stl" download>Download .stl for Strap Latch</LinkButton.Item>
+            </LinkButton>
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            This takes ~2 hours to print.
+            **53g of PLA Filament**
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -159,23 +207,7 @@ import {
         </GuideStep.Media>
         <GuideStep.Bullets>
           <GuideStep.Bullet>
-            Add an instruction.
-          </GuideStep.Bullet>
-        </GuideStep.Bullets>
-      </GuideStep>
-      <GuideStep title="(Optional) DIY Strap Parts">
-        <GuideStep.Media />
-        <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            If you are opting to make your own DIY straps, you will need to print an additional set of parts.
-          </GuideStep.Bullet>
-          <GuideStep.Bullet variant="note">
-            This step is **Optional** and you only need these parts if you are making your own DIY straps from scratch!
-          </GuideStep.Bullet>
-          <GuideStep.Bullet variant="button">
-            <LinkButton>
-              <LinkButton.Item href="" download>Download .3mf for DIY Straps</LinkButton.Item>
-            </LinkButton>
+            You are now done printing out all the parts you will need for the rest of the guide! This is the slowest guide, but you are now done!
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
