@@ -126,8 +126,11 @@ import {
             ]}
           />
           <MediaFigure
-            src="./images/tracker-pcb-back.webp"
-            displayRegion={{ x: 29.14, y: 67.02, width: 70.86 }}
+            src="./images/tracker-pcb-back-full.webp"
+            displayRegion={{ x: 0, y: 0, width: 100 }}
+            annotations={[
+              { type: "circle", x: 67.53, y: 80.71, radius: 7.7, color: "GREEN" },
+            ]}
           />
           <MediaFigure
             src="./images/battery-1000mah-side-bend-transparent-cropped-img-4592-2.webp"
@@ -139,16 +142,16 @@ import {
             Gently connect the battery connector to the tracker board. Move on to the next step.
           </GuideStep.Bullet>
           <GuideStep.Bullet variant="note">
-            If you **did not** buy batteries from **OpenPaw Labs** and your batteries **do not** have a connector you will need to solder them to the battery pads on the back of the board.
+            If you **did not** buy batteries from **OpenPaw Labs** and your batteries **do not** have a connector you will need to solder them to the battery pads on the back of the board. Red goes to (**+**), and Black goes to (**-**)
           </GuideStep.Bullet>
           <GuideStep.Bullet variant="caution">
             If you bought batteries with a connector from somewhere **other than OpenPaw Labs** you need make sure that the **connector is wired correctly**! 
             
             Third party batteries sometimes come with the **wires reversed** and will **damage your tracker** if not fixed.
             <br />
-            The Red Wire (+) needs to be on the **LEFT side** of the connector. 
+            The Red Wire (**+**) needs to be on the **LEFT side** of the connector. 
             
-            The Black Wire (-) needs to be on the **RIGHT side** of the connector.
+            The Black Wire (**-**) needs to be on the **RIGHT side** of the connector.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
