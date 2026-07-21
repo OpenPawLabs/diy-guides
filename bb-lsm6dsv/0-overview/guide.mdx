@@ -82,17 +82,13 @@ import {
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Gather Boards &amp; Batteries">
+      <GuideStep title="Get Tracker &amp; Charging Dock Boards">
         <GuideStep.Media>
           <MediaFigure
             src="./images/tracker-board-transparent-1080.webp"
             displayRegion={{ x: 16.72, y: 5.42, width: 65.7 }}
           />
           <MediaFigure src="./images/dock-pcb-transparent-img-4443.webp" />
-          <MediaFigure
-            src="./images/battery-1000mah-side-bend-transparent-img-4592.webp"
-            displayRegion={{ x: 33.63, y: 33.18, width: 34.44 }}
-          />
         </GuideStep.Media>
         <GuideStep.Bullets>
           <GuideStep.Bullet color="LIGHT_BLUE">
@@ -101,9 +97,6 @@ import {
           <GuideStep.Bullet color="YELLOW">
             Be sure to also buy a Charging Dock board if you plan to build one. Each dock charges up to 8 trackers.
           </GuideStep.Bullet>
-          <GuideStep.Bullet color="GREEN">
-            You will also need batteries for each tracker you are building. If you buy these from us they come with a JST (PH2.0) connector for easy connection to the tracker board!
-          </GuideStep.Bullet>
           <GuideStep.Bullet color="MAGENTA">
             We include all the screws you will need inside of the kit when you purchase!
           </GuideStep.Bullet>
@@ -111,6 +104,19 @@ import {
             <LinkButton>
               <LinkButton.Item href="https://openpawlabs.com/products/diy-slimevr-tracker#kit" external>Buy Trackers, Dock, & Batteries</LinkButton.Item>
             </LinkButton>
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Batteries">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/battery-1000mah-side-bend-transparent-img-4592.webp"
+            displayRegion={{ x: 33.63, y: 33.18, width: 34.44 }}
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="GREEN">
+            You will need batteries for each tracker you are building. If you are buying batteries from us they come with a JST (PH2.0) connector for easy connection to the tracker board!
           </GuideStep.Bullet>
           <GuideStep.Bullet variant="note">
             **If you live in a location we are unable to ship batteries to you will need to purchase the batteries separate!** Use one of the links below to buy the **803035** OR **903035** batteries from a 3rd party seller. If you are unable to find batteries with the correct connector (JST PH2.0) then you will **need a soldering iron** to attach the batteries!
@@ -136,7 +142,7 @@ import {
           />
           <MediaFigure
             src="./images/diy-strap-material.webp"
-            displayRegion={{ x: 0.0, y: 20.89, width: 100.0 }}
+            displayRegion={{ x: 0, y: 20.89, width: 100 }}
             annotations={[
               { type: "point", x: 50.61, y: 65.18, label: "DIY Straps", color: "LIGHT_BLUE" },
             ]}
