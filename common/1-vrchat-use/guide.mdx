@@ -14,8 +14,8 @@ import {
     title="Daily VR Use!"
     heroImage="./images/vrchat-wave.webp"
     difficulty="easy"
-    timeEstimate="30 minutes"
-    meta="Draft"
+    timeEstimate="5 minutes"
+    meta=""
   />
 
   <GuideLayout.Intro>
@@ -24,13 +24,155 @@ import {
 
   <GuideLayout.Content>
     <GuideStepList>
-      <GuideStep title="Describe the first step">
+      <GuideStep title="Launch Apps &amp; Turn on Trackers">
         <GuideStep.Media>
-          <MediaFigure src="./images/placeholder.jpg" />
+          <MediaFigure
+            src="./images/slimevr-calibrate-your-trackers.webp"
+            annotations={[
+              { type: "rectangle", x1: 70.05, y1: 8.37, x2: 100, y2: 25.4, color: "LIGHT_BLUE" },
+            ]}
+          />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Replace this placeholder instruction with the first action.
+          <GuideStep.Bullet color="MAGENTA">
+            Launch SteamVR and SlimeVR.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            Remove your trackers from the charging dock and turn them all on. SlimeVR will give you a notice that you need to calibrate your trackers.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Put the trackers on a stable surface and let them rest for a few seconds to calibrate. You should then see the notice in SlimeVR quickly go away. This will complete the "**Resting Calibration**"
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Put on Trackers &amp; Headset">
+        <GuideStep.Media>
+          <MediaFigure src="./images/img-4655.webp" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Put on all your straps and attach the trackers to the straps by sliding them down onto the Slide Mounts.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            Put on your VR headset (HMD).
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Full Reset">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/slimevr-full-calibration-1.webp"
+            displayRegion={{ x: 0, y: 0.09, width: 100 }}
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="GREEN">
+            Perform a Full Reset in SlimeVR by letting your arms rest at your sides and standing in a upright with your arms at your sides, making sure your head is facing forward. When ready click the "**Full Reset**" button OR tap on your Left Thigh tracker 3 times.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            The "**Full Calibration**" usually only needs to be done once at the start of your session. If you leave your playspace and come back, or remove your headset and put it back on, you will need to redo your "**Full Calibration**".
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Mounting Calibration">
+        <GuideStep.Media>
+          <MediaFigure src="./images/slimevr-mounting-calibration-2.webp" />
+          <MediaFigure src="./images/tracker-orientation.webp" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="MAGENTA">
+            Perform an Automatic Mounting Calibration by getting into the shown "**Ski position**", then press the "**Mounting Calibration**" button OR tap on your Right Thigh tracker 3 times.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            The mounting calibration will automatically detect the orientation of the trackers on your body part and assign it's location.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="VRChat Calibration">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/vrchat-wrist-menu-calibrate-button.webp"
+            displayRegion={{ x: 10.58, y: 8.4, width: 89.42 }}
+            annotations={[
+              { type: "circle", x: 55.07, y: 76.08, radius: 11.41, color: "GREEN" },
+            ]}
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="GREEN">
+            Inside VRChat open up the small menu and click on the "**Calibrate**" button in the small bottom menu.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Confirm Calibration">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/vrchat-calibration-mirror.webp"
+            displayRegion={{ x: 29.01, y: 18.78, width: 70.99 }}
+          />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Stand in a T-Pose to match your avatar, then press the trigger on both controllers at the same time.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="Go Play!">
+        <GuideStep.Media>
+          <MediaFigure src="./images/vrchat-wave.webp" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="GREEN">
+            That's all you need to do! Go and play in game!
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="How to: Quick Reset (Fix Drift)">
+        <GuideStep.Media>
+          <MediaFigure src="./images/double-tap-chest-placeholder.webp" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="YELLOW">
+            While playing if you notice drift you can do a **Quick Reset** by performing a "**Yaw Reset**". Tap twice on your chest tracker to trigger the "**Yaw Reset**".
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            You can do the "**Yaw Reset**" in any position where the trackers are all facing in the same direction as the headset/head tracker.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="How to: Full Reset (Fix Drift)">
+        <GuideStep.Media>
+          <MediaFigure src="./images/triple-tap-thighs-placeholder.webp" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="ORANGE">
+            If you are having drift and the Quick Reset did not fix it for you, you can perform a "**Full Reset**" while in game by tapping on your Left Thigh tracker three times.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Stand in the same position as the Full Reset when you first put on your trackers, standing with your arms resting at your sides comfortably and headset facing forward.
+          </GuideStep.Bullet>
+        </GuideStep.Bullets>
+      </GuideStep>
+      <GuideStep title="How to: Fix Mounting Calibration">
+        <GuideStep.Media>
+          <MediaFigure
+            src="./images/tracker-settings.webp"
+            displayRegion={{ x: 0, y: 0, width: 100 }}
+            annotations={[
+              { type: "circle", x: 84.98, y: 60.95, radius: 14.33, color: "GREEN" },
+            ]}
+          />
+          <MediaFigure src="./images/tracker-orientation-1.webp" />
+        </GuideStep.Media>
+        <GuideStep.Bullets>
+          <GuideStep.Bullet color="YELLOW">
+            Noticing that your body parts seem to move in an odd direction when you move them? There is a chance that the automatic mounting calibration did not properly set their orientation.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            Go to the SlimeVR app and click on the Tracker that is misbehaving. Verify that the "**Mounting orientation**" displays the correct way that your tracker is facing.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            If the Mounting orientation of the tracker is incorrect select "**Edit Mounting**" then select the correct tracker orientation in the popup window.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
