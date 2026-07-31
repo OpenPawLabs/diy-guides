@@ -22,7 +22,11 @@
     },
     {
       "path": "4-strap-assembly",
-      "description": "Attach the tracker mounts to the straps."
+      "description": "Attach the tracker mounts to the 3rd party straps."
+    },
+    {
+      "path": "diy-straps",
+      "description": "(Optional) Make your own DIY straps instead of buying them."
     },
     {
       "path": "common/0-onetime-tracker-setup",
