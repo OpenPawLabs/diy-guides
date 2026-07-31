@@ -13,7 +13,7 @@ import {
   <GuideLayout.Header
     title="DIY Straps (Optional)"
     heroImage="./images/body-strap-set-img-4863.webp"
-    difficulty="easy"
+    difficulty="moderate"
     timeEstimate="60 minutes"
     meta=""
   />
@@ -29,11 +29,41 @@ import {
           <MediaFigure
             src="./images/diy-strap-set-img-4812.webp"
             displayRegion={{ x: 4.59, y: 6.78, width: 88.68 }}
+            annotations={[
+              { type: "point", x: 21.52, y: 27.1, label: "1", color: "GREEN" },
+              { type: "point", x: 21.85, y: 51.46, label: "2", color: "LIGHT_BLUE" },
+              { type: "point", x: 11.53, y: 63.61, label: "3", color: "RED" },
+              { type: "rectangle", x1: 28.07, y1: 6.96, x2: 100, y2: 91.74, color: "YELLOW" },
+              { type: "point", x: 56.55, y: 53.31, label: "4", color: "YELLOW" },
+            ]}
           />
+          <MediaFigure src="./images/roll-of-material-img-4818.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            You will need to get...
+          <GuideStep.Bullet variant="note">
+            You will need to get the following parts/tools:
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            **Elastic Straps w/ Silicon Grips** (width: 30mm / ~1.2in)
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            **Small Lighter**
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="RED">
+            **Scissors**
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="YELLOW">
+            **3D Printed Parts for Straps** ([check 3d print guide here](https://docs.openpawlabs.com/projects/bb-lsm6dsv/1-3d-prints#step-7))
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="button">
+            <LinkButton>
+              <LinkButton.Item href="https://www.amazon.com/dp/B097XC3NZJ" external>($12) 10m Elastic Straps 1.1in (Amazon)</LinkButton.Item>
+              <LinkButton.Item href="https://www.amazon.com/dp/B092SM7Z2V" external>($12) 10m Elastic Straps 1.2in (Amazon)</LinkButton.Item>
+              <LinkButton.Item href="https://www.amazon.com/dp/B0FBS4CYGP" external>($10) 6m Elastic Straps 1 3/16in (Amazon)</LinkButton.Item>
+              <LinkButton.Item href="https://www.amazon.com/dp/B0GRV4KTM5" external>($8x2) 5m Elastic Straps 1.2in (Amazon)</LinkButton.Item>
+              <LinkButton.Item href="https://www.amazon.com/dp/B0F8J45BMT" external>($9x2) 5m Elastic Straps 1.2in (Amazon)</LinkButton.Item>
+              <LinkButton.Item href="https://www.amazon.com/dp/B09PD3VRHQ" external>($9x2) 6m Elastic Strap 1in (Amazon)</LinkButton.Item>
+            </LinkButton>
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -44,8 +74,22 @@ import {
           <MediaFigure src="./images/wrapped-strap-img-4815.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="GREEN">
+            Cut the strap to the proper length by wrapping it around your body part loosely as a rough measurement, then add an additional 3-4in (75-100mm) of length.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            You will need sections for your:
+            
+            - **2 x Ankles** (just above your ankle/foot)
+            
+            - **2 x Thighs** (the middle of your thigh)
+            
+            - **2 x Upper Arms** (where your bicep is)
+            
+            - **Hip** (where you wear a belt)
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            It is better to have too much extra length vs not enough length. You can always trim them shorter later!
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -58,20 +102,40 @@ import {
           <MediaFigure src="./images/strap-cut-to-length-frayed-img-4822.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="ORANGE">
+            To stop the ends fraying, take your lighter and move it over the end of the strap for ~1 second to melt/seal the end of the strap.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="RED">
+            See video for an example of how to do this. A quick pass over the end is enough to prevent future fraying.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="caution">
+            **Do not** leave the lighter on the end for more than a couple seconds, as **it could catch fire**!
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
       <GuideStep title="Grab Strap Parts">
         <GuideStep.Media>
           <MediaFigure src="./images/strap-and-parts-img-4830.webp" />
-          <MediaFigure src="./images/clasp-alignment-img-4828.webp" />
+          <MediaFigure
+            src="./images/clasp-alignment-img-4828.webp"
+            annotations={[
+              { type: "rectangle", x1: 38.51, y1: 71.31, x2: 65.1, y2: 87.15, color: "LIGHT_BLUE" },
+            ]}
+          />
           <MediaFigure src="./images/clasps-together-img-4861.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="GREEN">
+            Grab a set of parts to build your strap, you will need:
+            
+            - **1 x Tracker Slide Mount**
+            
+            - **2 x Strap Slides**
+            
+            - **1 pair of Clasps**
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Double check that the clasps you grab are a paired set and that they are able to connect to each other. When facing upwards **each side's tabs should line up with each other**.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -81,8 +145,11 @@ import {
           <MediaFigure src="./images/strap-threading-pt2-img-4839.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Attach the Slide to the strap by feeding the strap upwards through one end of the side, over the paw-print grips, then back down and out the other side.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="YELLOW">
+            **Make sure that the silicon side of the strap is facing towards the paw-print grips.** This helps make sure it will not move.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -93,19 +160,19 @@ import {
           <MediaFigure src="./images/strap-threading-pt4img-4846.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Feed the strap upwards through the side of the Clasp, then feed it back through the Slide, making sure that the silicon is now facing upwards.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Attach Slide Mount">
+      <GuideStep title="Attach Tracker Slide Mount">
         <GuideStep.Media>
           <MediaFigure src="./images/strap-threading-img-4850.webp" />
           <MediaFigure src="./images/thread-strap-mount-img-4849.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="GREEN">
+            Take your Tracker Slide Mount and thread it onto the strap, feeding the strap behind the slide mount.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -116,8 +183,11 @@ import {
           <MediaFigure src="./images/strap-standing-img-4857.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Repeat steps 5 & 6 to thread on a second Slide, making sure that the other end of the clasp is **facing downwards**.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            **Verify that you can connect the two ends of the clasps together.**
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -126,8 +196,17 @@ import {
           <MediaFigure src="./images/tighten-straps-img-4858.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Put on your strap and tighten down the straps moving the Slides to be adjacent to the Clasp halves.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="ORANGE">
+            To **tighten** the strap, move the slide away from the clasp, then **hold** the loose end of the strap and pull while moving the slide towards the clasp.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="YELLOW">
+            To **loosen** the strap, move the slide away from the clasp, then move it back towards the clasp **without holding** the loose end of the strap.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            If the ends of the straps are getting in the way, you can trim them back, making sure to leave 1-2 inches behind the Slides. Just make sure to repeat step 3 and melt the ends again to prevent fraying.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -136,8 +215,16 @@ import {
           <MediaFigure src="./images/body-strap-set-img-4863-1.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="GREEN">
+            Repeat steps 2-9 until you have completed all of the straps **except** for your chest harness. Make sure to make the following straps:
+            
+            - **2 x Ankles**
+            
+            - **2 x Thighs**
+            
+            - **2 x Upper Arms**
+            
+            - **Hip** (Belt line)
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -146,18 +233,32 @@ import {
           <MediaFigure src="./images/chest-straps-cut-to-length-img-4866-2.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Measure a chest strap just under your armpits, across the **top** of your chest and across your back.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="YELLOW">
+            Estimate/measure shoulder straps by placing the strap material over your shoulder, going from the top of your shoulder blade to the top of your chest (where you measured the strap going around your chest)
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="RED">
+            Add a 3-4" (75-100mm) extra to these measurements, you can always come back and trim off extra material later if it is too long after testing the fit!
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Chest Strap Parts">
+      <GuideStep title="Chest Harness Parts">
         <GuideStep.Media>
           <MediaFigure src="./images/chest-strap-parts-img-4869-1.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Grab the remaining parts to assemble your chest harness. You will need:
+            
+            - **1 x Tracker Slide Mount**
+            
+            - **4 x 3-way Slides**
+            
+            - **6 x normal Slides**
+            
+            - **1 pair of Clasps**
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -171,8 +272,11 @@ import {
           />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Attach all four 3-way Slides onto the strap that goes around your chest.  Make sure that the silicon on the straps is touching the paw-print grips.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            Align the 3-way Slides so that they are roughly in the same places as shown in the second image.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -183,8 +287,14 @@ import {
           <MediaFigure src="./images/chest-strap-3-ways-pt2-img-4873.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Adjust the 3-way Slides so that there is **extra space on one side of the harness**.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            Attach the Tracker Slide mount onto the side of the harness that you added extra space to.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="YELLOW">
+            Attach a normal Slide to both sides of the Chest strap.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -193,8 +303,11 @@ import {
           <MediaFigure src="./images/chest-strap-clasps-img-4879.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Attach the pair of Clasps to the ends of the chest strap, making sure that one side faces up, and the other side faces down.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="YELLOW">
+            Double check that the Clasps are able to latch on to each other.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -205,20 +318,32 @@ import {
           <MediaFigure src="./images/shoulder-strap-threading-pt2-img-4886.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Thread normal Slides onto each end of the shoulder straps, again making sure that the silicon part of the strap is touching the paw-print grips.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            Attach the shoulder straps to the 3-way slides in the same way as you would for a Clasp, threading the strap upwards through the 3-way slide.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="YELLOW">
+            Secure the strap end by threading it back through the normal Slides.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
-      <GuideStep title="Finish Shoulder Straps">
+      <GuideStep title="Finish Chest Harness">
         <GuideStep.Media>
           <MediaFigure src="./images/full-shoulder-strap-top-view-img-4890.webp" />
           <MediaFigure src="./images/full-chest-strap-img-4892.webp" />
           <MediaFigure src="./images/full-shoulder-strap-side-img-4889.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="GREEN">
+            Finish attaching each shoulder strap onto the 3-way slides.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Put on the chest harness and adjust each of the 3-way slides so that they are well positioned. Tighten down the normal slides so that the harness fits snugly.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            If any of the straps are too long, take a moment to trim them down, making sure to leave 1-2in (25-50mm) of strap after each of the normal slides.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -227,8 +352,11 @@ import {
           <MediaFigure src="./images/full-strap-set-img-4894.webp" />
         </GuideStep.Media>
         <GuideStep.Bullets>
-          <GuideStep.Bullet>
-            Add an instruction.
+          <GuideStep.Bullet color="GREEN">
+            You should now have completed a full set of 8 straps! Put them all on, and make sure they fit nicely. Make any final adjustments to the strap lengths.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="LIGHT_BLUE">
+            Move on to the next guide and get your software setup! You are so close to being in VR!
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
