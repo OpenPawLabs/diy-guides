@@ -14,7 +14,7 @@ import {
     title="Tracker Assembly"
     heroImage="./images/img-4599-2.webp"
     difficulty="easy"
-    timeEstimate="30 minutes"
+    timeEstimate="45 minutes"
     meta=""
   />
 
@@ -24,7 +24,7 @@ import {
 
   <GuideLayout.Sidebar>
     <ToolList title="Tools">
-      <ToolList.Item name="Philips Screwdriver (PH1)" quantity={1} thumbnail="./images/img-4713.webp" />
+      <ToolList.Item name="Philips Screwdriver (PH1)" quantity={1} href="https://www.amazon.com/iFixit-IF145-299-4-Driver-Bit-64pc/dp/B0189YWOIO" thumbnail="./images/img-4713.webp" />
     </ToolList>
   </GuideLayout.Sidebar>
 
@@ -39,7 +39,7 @@ import {
         </GuideStep.Media>
         <GuideStep.Bullets>
           <GuideStep.Bullet color="LIGHT_BLUE">
-            Grab all of the parts to assemble one tracker along with your Screwdriver.
+            Grab all of the parts to assemble one tracker along with your Philips PH1 Screwdriver.
           </GuideStep.Bullet>
           <GuideStep.Bullet color="RED">
             **You will need:**
@@ -55,6 +55,35 @@ import {
             1 x Tracker Label Lid
             
             1 x Tracker Power Switch
+          </GuideStep.Bullet>
+          <GuideStep.Bullet color="GREEN">
+            The 3D printing kit comes with 10 labels, but you will only need 8 of them. We suggest building the following trackers based on how many trackers you bought!
+            <br />
+            
+            **REQUIRED**
+            
+            - 2 x Ankle Trackers
+            
+            - 2 x Thigh Trackers
+            
+            - 1 x Chest Tracker
+            <br />
+            
+            **6 Tracker**
+            
+            - 1 x Hip Tracker
+            <br />
+            
+            **8 Tracker**
+            
+            - 2 x Upper Arm Tracker (Recommended)
+            
+            **OR**
+            
+            - 2 x Foot Tracker
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            Need a high quality screwdriver? [iFixit has a great kit](https://www.amazon.com/iFixit-IF145-299-4-Driver-Bit-64pc/dp/B0189YWOIO) that will serve you for all of your future building/repair needs!
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
@@ -139,7 +168,7 @@ import {
         </GuideStep.Media>
         <GuideStep.Bullets>
           <GuideStep.Bullet color="YELLOW">
-            Gently connect the battery connector to the tracker board. Move on to the next step.
+            Connect the battery to the tracker board, supporting the back/top of the connector on the board while you push the battery connector into the slot.
           </GuideStep.Bullet>
           <GuideStep.Bullet variant="note">
             If you **did not** buy batteries from **OpenPaw Labs** and your batteries **do not** have a connector you will need to solder them to the battery pads on the back of the board. Red goes to (**+**), and Black goes to (**-**)
@@ -249,6 +278,9 @@ import {
           </GuideStep.Bullet>
           <GuideStep.Bullet color="LIGHT_BLUE">
             Continue to tighten the screws until the board is securely connected down and you feel them come to a stop.
+          </GuideStep.Bullet>
+          <GuideStep.Bullet variant="note">
+            The screws take a little bit of force to get screwed in the first time. The included self-tapping screws will "cut" a thread into the plastic when they are first screwed in.
           </GuideStep.Bullet>
         </GuideStep.Bullets>
       </GuideStep>
